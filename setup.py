@@ -1,11 +1,25 @@
 import setuptools
+import os
+import nltk
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+# Change to your package's name
+package_name = "simple_ats" 
+
+# Get the list of required NLTK data packages
+nltk_data_packages = []
+with open("nltk.txt", "r") as fp:
+    nltk_data_packages = [line.strip() for line in fp]
+
+# Download the NLTK data when package is installed
+nltk.download(nltk_data_packages, download_dir=os.path.join(os.path.abspath(os.path.dirname(__file__)), package_name, 'package_data'))
+
+
 setuptools.setup(
     name="simple_ats",
-    version="0.1.0",
+    version="0.2.2",
     author="Abin Varghese",
     author_email="abinvarghese90@gmail.com",
     description="A simple package for parsing resumes and job descriptions",
@@ -13,6 +27,8 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/Spartan-119/ats_pypi",
     packages=setuptools.find_packages(),
+    package_data={package_name: [os.path.join('package_data', '*')]},
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
