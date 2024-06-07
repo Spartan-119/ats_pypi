@@ -1,0 +1,10 @@
+# the files and folders that I don't want on GitHub
+
+# virtual environment
+simple_ats_venv/ 
+
+__pycache__/
+*.pyc
+dist/
+build/
+*.egg-info/
