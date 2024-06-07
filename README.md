@@ -111,5 +111,6 @@ The similarity score between the resume and job description is: 75.23%
 
 In this example, the user runs the `simple_ats` package from the command line. The system prompts the user to enter the resume content and job description content. After processing the input, the system computes the similarity score and prints the result to the console.[1]
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/8765772/23d7ee15-ef5c-4c1e-9371-a7aab37c8dcd/paste.txt
+### Contributing
+
+Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
