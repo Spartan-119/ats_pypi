@@ -109,7 +109,7 @@ Please enter the job description content:
 The similarity score between the resume and job description is: 75.23%
 ```
 
-In this example, the user runs the `simple_ats` package from the command line. The system prompts the user to enter the resume content and job description content. After processing the input, the system computes the similarity score and prints the result to the console.[1]
+In this example, the user runs the `simple_ats` package from the command line. The system prompts the user to enter the resume content and job description content. After processing the input, the system computes the similarity score and prints the result to the console.
 
 ### Contributing
 
