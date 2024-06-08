@@ -19,7 +19,7 @@ nltk.download(nltk_data_packages, download_dir=os.path.join(os.path.abspath(os.p
 
 setuptools.setup(
     name=package_name,
-    version="2.0.0",
+    version="3.0.0",
     author="Abin Varghese",
     author_email="abinvarghese90@gmail.com",
     description="A simple package to return a similarity score between a resume and a job description.",
