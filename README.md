@@ -2,7 +2,7 @@
 
 The Simple Applicant Tracking System (simple_ats) is a Python application designed to parse resumes and job descriptions, extract relevant information, and compute the similarity between them. This system can be useful for recruiters and job seekers to assess the suitability of a candidate for a particular job role.
 
-## You can view the PyPI package and the latest version [here](https://pypi.org/project/simple-ats/)
+## You can view the PyPI package and the latest version [here](https://pypi.org/project/simple-ats/).
 
 ### Features
 
@@ -22,7 +22,31 @@ To install the simple_ats package, follow these steps:
 3. Run the following command to install the package:
 
 ```
-pip install simple_ats
+pip install simple-ats
+```
+```
+python
+```
+
+This will open the Python shell where you can write the Python commands
+
+```
+from simple_ats.ats import ATS
+resume_content = """<copy-paste your resume text here>"""
+jd_content = """<copy-paste the job description text here>"""
+
+ats.load_resume(resume_content)
+ats.load_job_description(jd_content)
+
+experience = ats.extract_experience()
+ats.clean_experience(experience)
+
+skills = " ".join(ats.extract_skills())
+ats.clean_skills(skills)
+
+similarity_score = ats.compute_similarity()
+
+print(f"The similarity score between the resume and job description is: {round(similarity_score.item() * 100, 2)}%")
 ```
 
 #### Linux/macOS
@@ -32,25 +56,63 @@ pip install simple_ats
 3. Run the following command to install the package:
 
 ```
-pip3 install simple_ats
+pip3 install simple-ats
+```
+```
+python
 ```
 
-### Usage
+This will open the Python shell where you can write the Python commands
+
+```
+from simple_ats.ats import ATS
+resume_content = """<copy-paste your resume text here>"""
+jd_content = """<copy-paste the job description text here>"""
+
+ats.load_resume(resume_content)
+ats.load_job_description(jd_content)
+
+experience = ats.extract_experience()
+ats.clean_experience(experience)
+
+skills = " ".join(ats.extract_skills())
+ats.clean_skills(skills)
+
+similarity_score = ats.compute_similarity()
+
+print(f"The similarity score between the resume and job description is: {round(similarity_score.item() * 100, 2)}%")
+```
+
+### To run on Jupyter notebook or Google Colab
 
 1. After installing the package, you can use it in your Python script by importing the necessary classes and functions.
 
 ```python
+!pip install simple-ats
+```
+```python
 from simple_ats import ATS
+```
 
+```python
+# Load resume and job description content
+resume_content = """<copy-paste your resume text here>"""
+jd_content = """<copy-paste the job description text here>"""
+```
+
+```python
+# add the resume content (copy-paste from your resume here)
+ats.load_resume(resume_content)
+```
+
+```python
+# add the job description content (copy-paste from the job description from the job board here)
+ats.load_job_description(jd_content)
+```
+
+```python
 # Create an instance of ATS
 ats = ATS()
-
-# Load resume and job description content
-resume_content = "..."
-jd_content = "..."
-ats.load_resume(resume_content)
-ats.load_job_description(jd_content)
-
 # Extract and clean experience
 experience = ats.extract_experience()
 ats.clean_experience(experience)
@@ -63,14 +125,6 @@ ats.clean_skills(skills)
 similarity_score = ats.compute_similarity()
 print(f"The similarity score between the resume and job description is: {round(similarity_score.item() * 100, 2)}%")
 ```
-
-2. Alternatively, you can run the `main()` function from the command line:
-
-```
-python -m simple_ats
-```
-
-This will prompt you to enter the resume content and job description content. The system will process the input, extract relevant information, clean the text, and compute the similarity score, which will be printed to the console.
 
 ### Code Structure
 
@@ -95,23 +149,10 @@ The following Python libraries are required to run the simple_ats system:
 - `string`: For string operations.
 - `nltk`: For natural language processing tasks, such as tokenization, stopword removal, and lemmatization.
 
-These dependencies will be automatically installed when you install the `simple_ats` package.
+These dependencies will be automatically installed when you install the `simple-ats` package.
 
-### Example
 
-```
-$ python -m simple_ats
-
-Please enter the resume content: 
-[Resume content goes here]
-
-Please enter the job description content:
-[Job description content goes here]
-
-The similarity score between the resume and job description is: 75.23%
-```
-
-In this example, the user runs the `simple_ats` package from the command line. The system prompts the user to enter the resume content and job description content. After processing the input, the system computes the similarity score and prints the result to the console.
+In this example, the user runs the `simple-ats` package from the command line. The system prompts the user to enter the resume content and job description content. After processing the input, the system computes the similarity score and prints the result to the console.
 
 ### Contributing
 

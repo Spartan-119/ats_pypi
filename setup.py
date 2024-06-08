@@ -18,11 +18,11 @@ nltk.download(nltk_data_packages, download_dir=os.path.join(os.path.abspath(os.p
 
 
 setuptools.setup(
-    name="simple_ats",
-    version="0.2.2",
+    name=package_name,
+    version="2.0.0",
     author="Abin Varghese",
     author_email="abinvarghese90@gmail.com",
-    description="A simple package for parsing resumes and job descriptions",
+    description="A simple package to return a similarity score between a resume and a job description.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Spartan-119/ats_pypi",
