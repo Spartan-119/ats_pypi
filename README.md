@@ -35,6 +35,8 @@ from simple_ats.ats import ATS
 resume_content = """<copy-paste your resume text here>"""
 jd_content = """<copy-paste the job description text here>"""
 
+ats = ATS()
+
 ats.load_resume(resume_content)
 ats.load_job_description(jd_content)
 
@@ -68,6 +70,8 @@ This will open the Python shell where you can write the Python commands
 from simple_ats.ats import ATS
 resume_content = """<copy-paste your resume text here>"""
 jd_content = """<copy-paste the job description text here>"""
+
+ats = ATS()
 
 ats.load_resume(resume_content)
 ats.load_job_description(jd_content)
