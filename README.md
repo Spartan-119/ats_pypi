@@ -2,6 +2,8 @@
 
 The Simple Applicant Tracking System (simple_ats) is a Python application designed to parse resumes and job descriptions, extract relevant information, and compute the similarity between them. This system can be useful for recruiters and job seekers to assess the suitability of a candidate for a particular job role.
 
+## You can find the demo [here](https://colab.research.google.com/drive/10s83Nb2B0rSX4ZlZWjNVsbcONHiq4hZ6?usp=sharing).
+
 ## You can view the PyPI package and the latest version [here](https://pypi.org/project/simple-ats/).
 
 ### Features
